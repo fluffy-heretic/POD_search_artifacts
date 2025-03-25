@@ -1,0 +1,15 @@
+﻿on_game_start = {
+	on_actions = { POD_at_on_game_start }
+}
+
+POD_at_on_game_start = {
+	effect = {
+		#if = {
+			#limit = { NOT = { has_global_variable = POD_at_artifact_trade_loaded } }
+			set_global_variable = {
+				name = POD_at_artifact_trade_loaded
+				value = yes
+			}
+		#}
+	}
+}
